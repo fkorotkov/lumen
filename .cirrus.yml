@@ -65,9 +65,6 @@ task:
     os_version: 2019
   env:
     CIRRUS_SHELL: powershell
-  windows_x86_64_cargo_cache:
-    folder: $CARGO_HOME/registry
-    fingerprint_script: cat Cargo.lock
   install_rustup_script: |
     $client = new-object System.Net.WebClient
     $client.DownloadFile('https://win.rustup.rs', "$pwd\rustup-init.exe")
